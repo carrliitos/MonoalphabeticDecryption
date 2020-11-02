@@ -13,6 +13,6 @@ Your task is to write a program which can...
 1. The program obtains the frequency of each letter in the ciphertext (**non-letter symbols can be ignored**).
 2. Provide your [analysis](/src/analysis/Analysis.txt) on the key you obtained using cryptanalysis.  Include this as a document with your submission (**PDF preferred**).  You must primarily use [frequency analysis](/src/out/LetterFrequency.csv) (minimum single-letter frequency) and assist it with analysis on the ciphertext using your knowledge of the English language or other preexisting knowledge.  Describe in detail how you improved your key until you obtained the final correct key and corresponding plaintext.  The expected length is around 2-3 pages double-spaced (**no maximum**).
 3. Your [program](/src/Monoalphabetic.java) [decrypts](/src/out/plainText.txt) the ciphertext into plaintext using the key you obtained (**Note that non-letter symbols are already plaintext, no need to decrypt them**).
-4. Include the original plaintext as a [.txt](/src/'BenzonS.txt') file
+4. Include the original plaintext as a [.txt](/src/BenzonS.txt) file
 5. Code must compile and run to receive a grade
-6. You *must* use the [text file](/src/'BenzonS.txt') with your name on it
+6. You *must* use the [text file](/src/BenzonS.txt) with your name on it
