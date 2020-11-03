@@ -16,3 +16,16 @@ Your task is to write a program which can...
 4. Include the original plaintext as a [.txt](/src/BenzonS.txt) file
 5. Code must compile and run to receive a grade
 6. You *must* use the [text file](/src/BenzonS.txt) with your name on it
+
+## Example
+### [Input Text](./src/tests/testing.txt):
+
+![Input test text](./img/InputTest.png)
+
+### [Letter Frequency](./src/tests/letterFrequency.txt):
+
+![Letter Frequency](./img/LetterFrequency.png)
+
+### [Plaintext result](./src/tests/plainText.txt):
+
+![Plain text](./img/Paintext.png)

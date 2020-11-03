@@ -22,15 +22,14 @@ import java.util.Arrays;
 
 public class Monoalphabetic {
 	public static void main(String[] args) {
-		String filepath = "BenzonS.txt";
-		// String filepath = "tests/testing.txt";
+		String filepath = "tests/testing.txt";
 
 		System.out.println("Calculating Letter Frequencies...");
 		int chars[] = letterFrequency(filepath);
 		if(chars == null) return;
 
 		try {
-			File f = new File("./out/letterFrequency.txt");
+			File f = new File("./tests/letterFrequency.txt");
 			FileWriter fWriter = new FileWriter(f);
 
 			fWriter.write("LETTER\t| FREQUENCY\n");
@@ -88,7 +87,7 @@ public class Monoalphabetic {
 			FileReader fReader = new FileReader(file);
 			BufferedReader bReader = new BufferedReader(fReader);
 
-			File f = new File("./out/plainText.txt");
+			File f = new File("./tests/plainText.txt");
 			FileWriter fWriter = new FileWriter(f);
 
 			int c = 0;
