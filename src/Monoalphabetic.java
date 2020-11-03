@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
@@ -21,14 +22,15 @@ import java.util.Arrays;
 
 public class Monoalphabetic {
 	public static void main(String[] args) {
-		String filepath = "Benzon S.txt";
+		String filepath = "BenzonS.txt";
+		// String filepath = "tests/testing.txt";
 
 		System.out.println("Calculating Letter Frequencies...");
 		int chars[] = letterFrequency(filepath);
 		if(chars == null) return;
 
 		try {
-			File f = new File("./letterFrequency.txt");
+			File f = new File("./out/letterFrequency.txt");
 			FileWriter fWriter = new FileWriter(f);
 
 			fWriter.write("LETTER\t| FREQUENCY\n");
@@ -74,7 +76,7 @@ public class Monoalphabetic {
 			reader.close();
 			return ret;
 		}catch(FileNotFoundException e) {
-			System.out.println("Cannot find file in letterFrequency() method.");
+			System.out.println("FileNotFoundException error in letterFrequency() method.");
 			e.printStackTrace();
 			return null;
 		}
@@ -86,7 +88,7 @@ public class Monoalphabetic {
 			FileReader fReader = new FileReader(file);
 			BufferedReader bReader = new BufferedReader(fReader);
 
-			File f = new File("./plainText.txt");
+			File f = new File("./out/plainText.txt");
 			FileWriter fWriter = new FileWriter(f);
 
 			int c = 0;
@@ -103,14 +105,29 @@ public class Monoalphabetic {
 			String KEY = "UIOYKLXHVBSFWJGNRDPECZMATQ";
 			String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+			// int i, j;
+			// for(i = 0; i < cipherText.length(); i++) {
+			// 	for(j = 0; j < KEY.length(); j++) {
+			// 		if(cipherText.charAt(i) == KEY.charAt(j)) {
+			// 			fWriter.write(ALPHABET.charAt(j));
+			// 		}
+			// 	}
+			// }
+
+			String plainText = "";
 			int i, j;
 			for(i = 0; i < cipherText.length(); i++) {
 				for(j = 0; j < KEY.length(); j++) {
 					if(cipherText.charAt(i) == KEY.charAt(j)) {
-						fWriter.write(ALPHABET.charAt(j));
+						plainText += ALPHABET.charAt(j);
+						break;
 					}
 				}
+				if(j == KEY.length()) {
+					plainText += cipherText.charAt(i);
+				}
 			}
+			fWriter.write(plainText);
 
 			System.out.println("Decryption finished.");
 			System.out.println("Recovered plaintext file location: " + f);
@@ -124,4 +141,8 @@ public class Monoalphabetic {
 			e.printStackTrace();
 		}
 	}
+
+	// TODO
+	// public static void encrypt() {
+	// }
 }
