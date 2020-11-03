@@ -28,4 +28,4 @@ Your task is to write a program which can...
 
 ### [Plaintext result](./src/tests/plainText.txt):
 
-![Plain text](./img/Paintext.png)
+![Plain text](./img/Plaintext.png)
