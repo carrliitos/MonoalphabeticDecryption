@@ -114,6 +114,7 @@ public class Monoalphabetic {
 			// 	}
 			// }
 
+			// this addition makes the plaintext readable, but made it slower
 			String plainText = "";
 			int i, j;
 			for(i = 0; i < cipherText.length(); i++) {
