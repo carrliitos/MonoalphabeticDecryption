@@ -1,6 +1,11 @@
 # Monoalphabetic Cipher Decryption Project
 > Benzon Carlitos Salazar
 
+## Contents:
+- [Overview](https://github.com/carrliitos/MonoalphabeticDecryption#overview)
+- [Requirements](https://github.com/carrliitos/MonoalphabeticDecryption#requiremets)
+- [Example](https://github.com/carrliitos/MonoalphabeticDecryption#example)
+
 ## Overview
 In this project, you are tasked with performing a cryptanalytic Ciphertext-Only Attack (COA) on the provided text document.  You are given the intercepted ciphertext as a text file and know that the message was encrypted using a Monoalphabetic cipher.
 
